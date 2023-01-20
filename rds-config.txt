@@ -1,0 +1,6 @@
+endpoint: database-1.cno2xlmzh7yp.us-east-1.rds.amazonaws.com
+Instance identifier: database-1 
+Database name: postgres
+Username: postgres
+Password: qwertyqwerty
+Port: 5432
