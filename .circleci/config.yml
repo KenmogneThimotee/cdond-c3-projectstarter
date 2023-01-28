@@ -248,6 +248,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       # Checkout code from git
+      - checkout
       - run:
           name: Run migrations
           command: |
@@ -267,6 +268,8 @@ jobs:
                 # If you are using kvdb.io, generate the bucket ID "9GE4jRtKznmVKRfvdBABBe" in your local terminal first
                 curl https://kvdb.io/MbVx2QYfu8sRNRXFXPzRQB/migration_${CIRCLE_WORKFLOW_ID:0:7}  -d '1'
             fi
+      - destroy-environment
+      - revert-migrations
      # Here's where you will add some code to rollback on failure
 
   deploy-frontend:
