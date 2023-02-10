@@ -330,7 +330,7 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
-            - "5D:D6:7C:1A:5B:8F:90:8B:27:6D:00:00:6C:F5:47:B8:8A:9B:B5:07"
+            - "24:11:ef:89:bd:eb:3a:53:d9:df:5d:32:f4:13:f1:27"
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/
