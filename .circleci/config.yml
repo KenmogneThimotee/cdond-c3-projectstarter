@@ -399,8 +399,10 @@ jobs:
             # your code here
             if curl -s $API_URL/api/status | grep "ok"
             then
+                curl -s $API_URL/api/status
                 exit 0
             else
+                curl -s $API_URL/api/status
                 exit 1
             fi
       - run:
@@ -410,8 +412,10 @@ jobs:
             FRONTEND_WEBSITE=http://udapeople-${CIRCLE_WORKFLOW_ID:0:7}.s3-website.${AWS_DEFAULT_REGION}.amazonaws.com
             if curl -s $FRONTEND_WEBSITE | grep "Welcome"
             then
+                curl -s $FRONTEND_WEBSITE
                 exit 1
             else
+                curl -s $FRONTEND_WEBSITE
                 exit 1
             fi
       - destroy-environment
