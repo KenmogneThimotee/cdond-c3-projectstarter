@@ -398,13 +398,10 @@ jobs:
           name: Backend smoke test.
           command: |
             # your code here
-            
-            if curl -s $API_URL/api/status | grep "ok"
+            if curl -s $API_URL/api/status | grep ok
             then
-                curl -s $API_URL/api/status
                 exit 0
             else
-                curl -s $API_URL/api/status
                 exit 1
             fi
       - run:
