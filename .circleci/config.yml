@@ -392,11 +392,13 @@ jobs:
             --output text)
             export API_URL=http://${BACKEND_PUBLIC_IP}:3030
             echo http://${BACKEND_PUBLIC_IP}:3030
+            curl -s $API_URL/api/status
 
       - run:
           name: Backend smoke test.
           command: |
             # your code here
+            
             if curl -s $API_URL/api/status | grep "ok"
             then
                 curl -s $API_URL/api/status
