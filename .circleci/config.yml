@@ -419,7 +419,7 @@ jobs:
             if curl -s $FRONTEND_WEBSITE | grep "Welcome"
             then
                 curl -s $FRONTEND_WEBSITE
-                exit 0
+                exit 1
             else
                 curl -s $FRONTEND_WEBSITE
                 exit 1
