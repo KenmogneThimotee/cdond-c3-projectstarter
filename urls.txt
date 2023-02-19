@@ -1,2 +1,2 @@
 URL01 = https://github.com/KenmogneThimotee/cdond-c3-projectstarter
-URL02 = udapeople-4f42e05.s3.amazonaws.com	
+URL02 = udapeople-7fb6b6b.s3.amazonaws.com	
