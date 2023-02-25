@@ -291,8 +291,8 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/
-      - restore_cache:
-          keys: [backend-build]
+      # - restore_cache:
+      #     keys: [backend-build]
       - run:
           name: Install dependencies
           command: |
@@ -321,7 +321,7 @@ jobs:
             --query 'Reservations[*].Instances[*].PublicIpAddress' \
             --output text)
 
-            #echo "API_URL=http://${BACKEND_PUBLIC_IP}:3030" >> frontend/.env
+            echo "API_URL=http://${BACKEND_PUBLIC_IP}:3030" >> .env
             #cat frontend/.env
             export API_URL="http://${BACKEND_PUBLIC_IP}:3030"
             echo "${API_URL}"
